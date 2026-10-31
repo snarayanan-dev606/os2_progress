@@ -1,0 +1,270 @@
+/* Technical Challenges Styles */
+.challenges-section {
+  position: relative;
+  background-color: var(--bg-premier);
+}
+
+.challenges-interactive-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Sidebar Menu */
+.challenges-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.challenges-menu-heading {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-left: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.challenge-selector-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.875rem 1rem;
+  background-color: #FAF7F2;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-xs);
+}
+
+.challenge-selector-btn:hover {
+  border-color: var(--border-medium);
+  transform: translateX(2px);
+  background-color: #FFFFFF;
+}
+
+.challenge-btn-active {
+  background-color: #FFFFFF !important;
+  border-color: #18181B !important;
+  box-shadow: 0 4px 12px rgba(24, 24, 27, 0.12) !important;
+  border-left: 3px solid #18181B !important;
+}
+
+.ch-btn-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.35rem;
+}
+
+.ch-num {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.ch-cat {
+  font-size: 0.625rem;
+}
+
+.ch-btn-title {
+  font-size: 0.84375rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  line-height: 1.35;
+}
+
+/* Dossier Card */
+.challenge-dossier-card {
+  padding: 2.25rem;
+  background-color: #FAF7F2;
+  border: 1px solid var(--border-medium);
+  box-shadow: var(--shadow-md);
+}
+
+.dossier-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.dossier-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.dossier-ref {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.dossier-title {
+  font-size: 1.5rem;
+  color: var(--text-heading);
+}
+
+/* Before / After Split */
+.before-after-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.ba-column {
+  background-color: #F4EFEB;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.ba-before {
+  border-top: 3px solid var(--danger);
+}
+
+.ba-after {
+  border-top: 3px solid var(--success);
+  background-color: #FFFFFF;
+}
+
+.ba-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.125rem 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+  background-color: #FAF7F2;
+}
+
+.ba-badge-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ba-badge-danger {
+  background-color: var(--danger-subtle);
+  color: var(--danger);
+}
+
+.ba-badge-success {
+  background-color: var(--success-subtle);
+  color: var(--success);
+}
+
+.ba-col-title {
+  font-size: 0.9375rem;
+  color: var(--text-heading);
+}
+
+.ba-sub {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.ba-body {
+  padding: 1.25rem;
+  flex-grow: 1;
+}
+
+.ba-text {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.ba-footer {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.ba-footer-danger {
+  background-color: #FEF2F2;
+}
+
+.ba-footer-success {
+  background-color: #ECFDF5;
+}
+
+.ba-meta-lbl {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.ba-footer-danger .ba-meta-lbl {
+  color: #991B1B;
+}
+
+.ba-footer-success .ba-meta-lbl {
+  color: #065F46;
+}
+
+.ba-meta-val {
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.ba-footer-danger .ba-meta-val {
+  color: #7F1D1D;
+}
+
+.ba-footer-success .ba-meta-val {
+  color: #047857;
+}
+
+/* Verification Callout */
+.dossier-verification-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background-color: #EAE4D9;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .challenges-interactive-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .challenges-menu-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .challenges-menu-list {
+    grid-template-columns: 1fr;
+  }
+
+  .before-after-split-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,381 @@
+/* Presentation Modal Styles */
+.presentation-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background-color: rgba(12, 10, 9, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeInModal 200ms ease;
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.presentation-modal-window {
+  width: 100%;
+  max-width: 68rem;
+  height: 85vh;
+  background-color: #FAF7F2;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--border-medium);
+}
+
+/* Top Bar */
+.presentation-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.875rem 1.75rem;
+  background-color: #EAE4D9;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.pres-top-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pres-brand {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--text-heading);
+}
+
+.pres-badge {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #92400E;
+  background-color: #FEF3C7;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+}
+
+.pres-slide-counter {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.pres-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.35rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pres-close-btn:hover {
+  background-color: #DDD6C8;
+  color: var(--text-primary);
+}
+
+/* Slide Canvas */
+.presentation-canvas {
+  flex-grow: 1;
+  padding: 2.5rem 3.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FAF7F2;
+}
+
+.slide-container {
+  max-width: 58rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.slide-header {
+  margin-bottom: 2rem;
+}
+
+.slide-kicker {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-amber);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.slide-subheading {
+  font-size: 1.75rem;
+  color: var(--text-heading);
+}
+
+/* Slide 1 Hero */
+.slide-hero-layout {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.slide-badge-pill {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #92400E;
+  background-color: #FEF3C7;
+  border: 1px solid #FCD34D;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+}
+
+.slide-main-title {
+  font-size: 2.25rem;
+  color: var(--text-heading);
+}
+
+.slide-tagline {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 44rem;
+}
+
+.slide-metrics-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.slide-kpi {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+}
+
+.slide-kpi-val {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  display: block;
+}
+
+.slide-kpi-lbl {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Slide 2 Compare */
+.slide-split-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.slide-compare-col {
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+}
+
+.slide-col-legacy {
+  background-color: #FFF8F8;
+  border-top: 4px solid var(--danger);
+}
+
+.slide-col-modern {
+  background-color: #F4EFEB;
+  border-top: 4px solid var(--primary);
+}
+
+.slide-compare-col h4 {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  color: var(--text-heading);
+}
+
+.slide-compare-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+/* Slide 3 Features */
+.slide-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.slide-feat-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.slide-feat-num {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--accent-amber);
+  font-family: var(--font-mono);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.slide-feat-card h5 {
+  font-size: 0.9375rem;
+  margin-bottom: 0.35rem;
+  color: var(--text-heading);
+}
+
+.slide-feat-card p {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+/* Slide 4 AWS */
+.slide-aws-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.slide-aws-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background-color: #FAF4E8;
+  border: 1px solid #FCD34D;
+  border-radius: var(--radius-md);
+}
+
+.slide-aws-banner strong {
+  color: #92400E;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.slide-aws-banner p {
+  font-size: 0.84375rem;
+  color: #78350F;
+}
+
+.slide-aws-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.slide-aws-node {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.aws-node-label {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--text-heading);
+  margin-bottom: 0.2rem;
+}
+
+.aws-node-detail {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Slide 5 Challenges */
+.slide-challenges-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.slide-ch-item {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent-amber);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 1rem 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.slide-ch-item strong {
+  color: var(--text-heading);
+}
+
+/* Bottom Bar */
+.presentation-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.75rem;
+  background-color: #EAE4D9;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.speaker-notes-drawer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 44rem;
+}
+
+.notes-lbl {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--accent-amber);
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.notes-text {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.slide-nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .presentation-canvas {
+    padding: 1.5rem;
+  }
+
+  .slide-split-compare, .slide-features-grid, .slide-aws-grid, .slide-metrics-row {
+    grid-template-columns: 1fr;
+  }
+
+  .speaker-notes-drawer {
+    display: none;
+  }
+}

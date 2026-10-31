@@ -1,0 +1,202 @@
+/* Project Documentation Styles */
+.documentation-section {
+  position: relative;
+  background-color: var(--bg-premier);
+}
+
+.doc-viewer-card {
+  background-color: #FAF7F2;
+  border: 1px solid var(--border-medium);
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.doc-viewer-tabs {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #EAE4D9;
+  border-bottom: 1px solid var(--border-subtle);
+  overflow-x: auto;
+}
+
+.doc-tab-btn {
+  padding: 0.5rem 0.875rem;
+  border: 1px solid transparent;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.doc-tab-btn:hover {
+  color: var(--text-heading);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.doc-tab-active {
+  background-color: #FAF7F2 !important;
+  color: #18181B !important;
+  border-color: var(--border-medium) !important;
+  box-shadow: var(--shadow-xs);
+}
+
+.doc-export-action {
+  margin-left: auto;
+}
+
+/* Viewport & Article */
+.doc-viewport {
+  padding: 2.5rem;
+  background-color: #FAF7F2;
+}
+
+.doc-article {
+  max-width: 54rem;
+  margin: 0 auto;
+}
+
+.article-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.doc-kicker {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-amber);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.doc-heading {
+  font-size: 1.625rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-heading);
+}
+
+.doc-meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.doc-body-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.doc-body-text h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-heading);
+}
+
+.doc-body-text ul {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.doc-callout-warning {
+  padding: 1rem 1.25rem;
+  background-color: #FEF3C7;
+  border-left: 3px solid var(--accent-amber);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.875rem;
+  color: #78350F;
+  line-height: 1.5;
+}
+
+/* Models Table */
+.models-table-wrapper, .templates-comparison-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  margin-top: 0.75rem;
+}
+
+.models-table, .templates-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.8125rem;
+}
+
+.models-table th, .templates-table th {
+  background-color: #EAE4D9;
+  padding: 0.75rem 1rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  border-bottom: 1px solid var(--border-medium);
+}
+
+.models-table td, .templates-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  line-height: 1.45;
+  background-color: #FAF7F2;
+}
+
+.models-table tr:last-child td, .templates-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Standards Grid */
+.standards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.standard-item-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.standard-item-box h5 {
+  font-size: 0.9375rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-heading);
+}
+
+.standard-item-box p {
+  font-size: 0.84375rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .doc-viewport {
+    padding: 1.5rem;
+  }
+
+  .doc-export-action {
+    display: none;
+  }
+}
